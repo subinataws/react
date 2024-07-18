@@ -35,6 +35,8 @@ commands:
           key: v2-yarn_cache-{{ arch }}-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache/yarn
+      - store_test_results:
+          path: test-results
 
 # The CircleCI API doesn't yet support triggering a specific workflow, but it
 # does support triggering a pipeline. So as a workaround you can triggger the
